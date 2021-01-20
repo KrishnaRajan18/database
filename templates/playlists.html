@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Find your Playlist here:</h1>
+
+<ul>
+{% for playlist in playlists %}
+  <li>
+     <a href="/playlists/{{ playlist.id }}">{{ playlist.name }}</a>
+  </li>
+{% endfor %}
+</ul>
+<p class="lead">Check out the currently available playlists, or create a new one!</p>
+<p><a class="btn btn-dark" href="/playlists/add">Add a playlist</a></p>
+
+{% endblock %}
